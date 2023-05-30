@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  event-mvc:
+    image: dlast1/event-mvc:4.0
+    environment:
+      - DB_URL=jdbc:mysql://events-db-n-va.c4isvb5ht0bc.us-east-1.rds.amazonaws.com:3306/ah_data
+      - DB_USERNAME=root
+      - DB_PASSWORD=top-secret-password
+    ports:
+      - 8080:8080

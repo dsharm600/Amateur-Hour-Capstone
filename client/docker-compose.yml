@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  event-api:
+    image: dlast1/events-ui:1.0
+    environment:
+      - EVENTS_BACKEND_URL=http://events-api-access.us-east-1.elasticbeanstalk.com/api
+    ports:
+      - 80:80

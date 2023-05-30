@@ -1,0 +1,159 @@
+Get  http://localhost:8080/api/event/2 HTTP/1.1
+Content-Type: application/json
+
+###
+Get http://localhost:8080/ HTTP/1.1
+
+###
+Get http://localhost:8080/api/event/MN/1 HTTP/1.1
+Content-Type: application/json
+###
+Get http://localhost:8080/api/event/IL/1 HTTP/1.1
+Content-Type: application/json
+
+###
+Get http://localhost:8080/api/tag/events/2 HTTP/1.1
+Content-Type: application/json
+
+###
+Get http://localhost:8080/api/tag/id/3 HTTP/1.1
+Content-Type: application/json
+
+###
+Get http://localhost:8080/api/rsvp/enrollment/2 HTTP/1.1
+Content-Type: application/json
+
+
+###
+DELETE http://localhost:8080/apievent/18 HTTP/1.1
+Content-Type: application/json
+      headers: {
+        Authorization: `Bearer eyJpc3MiOiJhbWF0dWVyLWhvdXIiLCJzdWIiOiJBbXlDb29rcyIsImF1dGhvcml0aWVzIjoiUk9MRV9VU0VSIiwidXNlcklkIjo3LCJleHAiOjE2NTQxMjg4MjR9`
+      }
+
+
+###
+POST http://localhost:8080/api/authenticate HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "Testy",
+    "password": "P@ssword1"
+}
+
+###
+Get http://localhost:8080/api/rsvp/6/10 HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://localhost:8080/api/event HTTP/1.1
+Content-Type: application/json
+
+{
+      "host": "AmyCooks",
+      "eventDescription":"Some test description",
+      "eventNotes":"Some test notes",
+      "eventAddress":"1234 Main Street",
+      "city":"Minneapolis",
+      "state":"WI",
+      "eventDate":"2022-06-15T17:30:00",
+      "title":"Test Title",
+      "capacity":"50",
+        "tags": [
+    {
+      "tagId": 7,
+      "tagName": "Cooking"
+    }
+  ],
+}
+
+
+
+###
+POST http://localhost:8080/api/rsvp/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "appUserId": "31",
+    "eventId": "1"
+}
+
+###
+DELETE  http://localhost:8080/api/rsvp/29 HTTP/1.1
+Content-Type: application/json
+
+###
+GET  http://localhost:8080/api/rsvp/enrollment/1 HTTP/1.1
+Content-Type: application/json
+
+###
+Get http://localhost:8080/api/rsvp/1/31 HTTP/1.1
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/authenticate HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "31",
+    "password": "P@ssw0rd!"
+}
+
+###
+GET http://localhost:8080/api/todos HTTP/1.1
+
+###
+
+GET http://localhost:8080/api/todos/1 HTTP/1.1
+
+###
+
+GET http://localhost:8080/api/todos/99999 HTTP/1.1
+
+###
+
+POST http://localhost:8080/api/todos HTTP/1.1
+Content-Type: application/json
+
+###
+
+POST http://localhost:8080/api/todos HTTP/1.1
+Content-Type: application/json
+
+{}
+
+###
+
+POST http://localhost:8080/api/todos HTTP/1.1
+Content-Type: application/json
+
+{
+    "description": "New todo."
+}
+
+###
+
+PUT http://localhost:8080/api/todos/1 HTTP/1.1
+Content-Type: application/json
+
+###
+
+PUT http://localhost:8080/api/todos/1 HTTP/1.1
+Content-Type: application/json
+
+{}
+
+###
+
+PUT http://localhost:8080/api/todos/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "description": "Updated todo."
+}
+
+###
+
+DELETE http://localhost:8080/api/todos/1 HTTP/1.1
